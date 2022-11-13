@@ -147,10 +147,9 @@ router.put("/cribs/:id", function _callee4(req, res) {
           cribWithId = cribData.findIndex(function (e) {
             return e.id === Number(req.params.id);
           });
-          console.log(cribWithId);
 
           if (!(cribWithId >= 0)) {
-            _context4.next = 10;
+            _context4.next = 9;
             break;
           }
 
@@ -158,22 +157,22 @@ router.put("/cribs/:id", function _callee4(req, res) {
           _cribInputValidate2 = cribInputValidate(req.body), errors = _cribInputValidate2.errors, isValid = _cribInputValidate2.isValid;
 
           if (isValid) {
-            _context4.next = 6;
+            _context4.next = 5;
             break;
           }
 
           return _context4.abrupt("return", res.status(400).json(errors));
 
-        case 6:
+        case 5:
           cribData[cribWithId].name = req.body.name;
           cribData[cribWithId].img = req.body.img;
           cribData[cribWithId].location = req.body.location;
           return _context4.abrupt("return", res.status(200).json(cribData));
 
-        case 10:
+        case 9:
           return _context4.abrupt("return", res.status(404).json("Crib with id ".concat(req.params.id, " not found")));
 
-        case 11:
+        case 10:
         case "end":
           return _context4.stop();
       }

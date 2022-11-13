@@ -72,8 +72,6 @@ router.put("/cribs/:id", async (req, res) => {
   //Check if crib with the id exists
   const cribWithId = cribData.findIndex((e) => e.id === Number(req.params.id));
 
-  console.log(cribWithId);
-
   if (cribWithId >= 0) {
     //Validate request body if there is any null value
     const { errors, isValid } = cribInputValidate(req.body);
