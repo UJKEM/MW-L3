@@ -21,7 +21,7 @@ class CribComponent extends React.Component {
     this.setState({ currentCrib: { ...this.state.currentCrib, ...crib } });
   };
 
-  handleEditShowClose = () => {
+  handleEditModalShowClose = () => {
     this.setState({ editShowModal: !this.state.editShowModal });
   };
 
@@ -39,14 +39,14 @@ class CribComponent extends React.Component {
                   show={this.state.editShowModal}
                   handleEditCrib={this.props.handleEditCrib}
                   handleDeleteCrib={this.props.handleDeleteCrib}
-                  handleEditShowClose={this.handleEditShowClose}
+                  handleEditModalShowClose={this.handleEditModalShowClose}
                 />
               ))}
           </div>
         </div>
         <EditModalComponent
           show={this.state.editShowModal}
-          handleEditShowClose={this.handleEditShowClose}
+          handleEditModalShowClose={this.handleEditModalShowClose}
           handleEditCrib={this.props.handleEditCrib}
           crib={this.state.currentCrib}
         />

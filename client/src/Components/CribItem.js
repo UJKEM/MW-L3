@@ -4,7 +4,7 @@ import { PropTypes } from "prop-types";
 
 export default class CribItem extends Component {
   handleEditButtonClick = (currentCrib) => {
-    this.props.handleEditShowClose();
+    this.props.handleEditModalShowClose();
     this.props.updateCurrentCrib(currentCrib);
   };
 
@@ -57,6 +57,6 @@ CribItem.propTypes = {
   img: PropTypes.string,
   location: PropTypes.string,
   handleDeleteCrib: PropTypes.func.isRequired,
-  handleEditShowClose: PropTypes.func.isRequired,
+  handleEditModalShowClose: PropTypes.func.isRequired,
   updateCurrentCrib: PropTypes.func.isRequired,
 };

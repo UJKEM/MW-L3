@@ -20,13 +20,16 @@ export default class AddModalComponent extends Component {
   handleModalAddButtonClick = (e, newCrib) => {
     e.preventDefault();
     this.props.handleAddCrib(newCrib);
-    this.props.handleAddShowClose();
+    this.props.handleAddModalShowClose();
   };
 
   render() {
     return (
       <>
-        <Modal show={this.props.show} onHide={this.props.handleAddShowClose}>
+        <Modal
+          show={this.props.show}
+          onHide={this.props.handleAddModalShowClose}
+        >
           <Modal.Header closeButton>
             <Modal.Title>Add Crib</Modal.Title>
           </Modal.Header>
@@ -91,6 +94,6 @@ export default class AddModalComponent extends Component {
 
 AddModalComponent.propTypes = {
   show: PropTypes.bool.isRequired,
-  handleAddShowClose: PropTypes.func.isRequired,
+  handleAddModalShowClose: PropTypes.func.isRequired,
   handleAddCrib: PropTypes.func.isRequired,
 };

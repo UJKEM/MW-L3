@@ -23,7 +23,7 @@ export default class EditModalComponent extends Component {
       : this.props.crib.location;
 
     await this.props.handleEditCrib(id, updatedCrib);
-    this.props.handleEditShowClose();
+    this.props.handleEditModalShowClose();
   };
 
   handleInputOnChange = (e) => {
@@ -36,7 +36,10 @@ export default class EditModalComponent extends Component {
   render() {
     return (
       <>
-        <Modal show={this.props.show} onHide={this.props.handleEditShowClose}>
+        <Modal
+          show={this.props.show}
+          onHide={this.props.handleEditModalShowClose}
+        >
           <Modal.Header closeButton>
             <Modal.Title>Crib Id: {this.props.crib.id}</Modal.Title>
           </Modal.Header>
@@ -87,7 +90,7 @@ export default class EditModalComponent extends Component {
           <Modal.Footer>
             <Button
               variant="secondary"
-              onClick={this.props.handleEditShowClose}
+              onClick={this.props.handleEditModalShowClose}
             >
               Close
             </Button>
@@ -113,5 +116,5 @@ EditModalComponent.propTypes = {
   crib: PropTypes.object.isRequired,
   show: PropTypes.bool.isRequired,
   handleEditCrib: PropTypes.func,
-  handleEditShowClose: PropTypes.func.isRequired,
+  handleEditModalShowClose: PropTypes.func.isRequired,
 };

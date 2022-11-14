@@ -10,7 +10,7 @@ export default class SearchBarComponent extends Component {
     };
   }
 
-  handleAddShowClose = () => {
+  handleAddModalShowClose = () => {
     this.setState({ addShowModal: !this.state.addShowModal });
   };
 
@@ -22,7 +22,7 @@ export default class SearchBarComponent extends Component {
             <button
               className="btn btn-primary mb-3"
               name="Add"
-              onClick={() => this.handleAddShowClose()}
+              onClick={() => this.handleAddModalShowClose()}
             >
               Add
             </button>
@@ -43,7 +43,7 @@ export default class SearchBarComponent extends Component {
         <div className="d-flex align-items-center justify-content-end "></div>
         <AddModalComponent
           show={this.state.addShowModal}
-          handleAddShowClose={this.handleAddShowClose}
+          handleAddModalShowClose={this.handleAddModalShowClose}
           handleAddCrib={this.props.handleAddCrib}
         />
       </>
