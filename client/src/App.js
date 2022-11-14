@@ -55,7 +55,9 @@ class App extends React.Component {
     const filteredCribList =
       this.state.crib &&
       this.state.crib.filter(
-        (cr) => cr.name.includes(search) || cr.location.includes(search)
+        (cr) =>
+          cr.name.toLowerCase().includes(search) ||
+          cr.location.toLowerCase().includes(search)
       );
 
     if (filteredCribList.length > 0) {
