@@ -14,6 +14,14 @@ export default class EditModalComponent extends Component {
     };
   }
   handleSave = async (id, updatedCrib) => {
+    updatedCrib.name = updatedCrib.name
+      ? updatedCrib.name
+      : this.props.crib.name;
+    updatedCrib.img = updatedCrib.img ? updatedCrib.img : this.props.crib.img;
+    updatedCrib.location = updatedCrib.location
+      ? updatedCrib.location
+      : this.props.crib.location;
+
     await this.props.handleEditCrib(id, updatedCrib);
     this.props.handleEditShowClose();
   };
