@@ -1,7 +1,7 @@
 # MW-L3
-MW-LW is a basic full stack app built using Node.js, Express.js, React.js, and Redis. It includes CRUD operation(admin authentication is not being taken care of, since it is a basic app).
+MW-L3 is a basic full stack app built using Node.js, Express.js, React.js, and Redis. It includes CRUD operation(admin authentication is not being taken care of, since it is a basic app).
 
-#Steps to Reproduce
+# Steps to Reproduce
 1. Clone the repository into your local environment using command "git clone".
 2. Install necessary dependencies using "npm i" on both server and client.
 3. You may notice a folder called "client", please navigate into it and install necessary dependencies.
