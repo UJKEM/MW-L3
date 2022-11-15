@@ -10,5 +10,5 @@ MW-L3 is a basic full stack app built using Node.js, Express.js, React.js, and R
 6. Please ensure you have a working redis-server before moving onto the project.
 7. Navigate to your server code built using Node.js.
 8. Open the terminal and paste the following command "npm run dev".
-9. The client and server run on port 3000 and 4000 respectfully. Navigate to your web broswer and paste the following http://localhost:3000.
+9. The client and server run on port 3000 and 4000 respectively. Navigate to your web broswer and paste the following http://localhost:3000.
 10. Start using the basic fullstack app.
